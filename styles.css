@@ -1,0 +1,49 @@
+:root{--navy:#0A2A5E;--blue:#1456B8;--sky:#E6F0FC;--orange:#F26B1D;--peach:#FFEBDC;--ink:#14213A;--bg:#FFFFFF;--card:#F5F9FF;--line:#C9D9EE;--muted:#4A5A78;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ink:#EAF1FF;--bg:#0B1730;--card:#112349;--line:#27437D;--muted:#B3C3E3;--sky:#112349;--peach:#3A2414}}
+:root[data-theme="dark"]{--ink:#EAF1FF;--bg:#0B1730;--card:#112349;--line:#27437D;--muted:#B3C3E3;--sky:#112349;--peach:#3A2414}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Nunito Sans',system-ui,sans-serif;line-height:1.55;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+h1,h2,h3{font-family:'Sora',system-ui,sans-serif;line-height:1.15;margin:0}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+header{background:var(--navy);color:#fff;border-bottom:8px solid var(--orange)}
+.logos{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:20px 0}
+.logo{height:72px;border:2px dashed rgba(255,255,255,.45);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:.85rem;color:rgba(255,255,255,.7)}
+.hero{padding:28px 0 44px}
+.hero h1{font-size:clamp(2.6rem,9vw,5rem);font-weight:800;letter-spacing:-.02em}
+.hero h1 span{color:var(--orange)}
+.hero p{max-width:60ch;font-size:1.15rem;margin:14px 0 0;color:#DCE8FB}
+.when{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.chip{background:var(--orange);color:#fff;font-weight:700;padding:8px 16px;border-radius:999px}
+.chip.alt{background:transparent;border:2px solid #fff}
+section{padding:44px 0 8px}
+h2{font-size:1.7rem;color:var(--blue);margin-bottom:6px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) h2{color:#7FB1FF}}
+:root[data-theme="dark"] h2{color:#7FB1FF}
+.lead{color:var(--muted);margin:0 0 22px;max-width:65ch}
+.day{display:grid;grid-template-columns:130px 1fr 1fr 1fr;gap:0;border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-bottom:12px;background:var(--card)}
+.day>div{padding:14px 16px;border-left:1px solid var(--line)}
+.day>.d{background:var(--blue);color:#fff;border:0;display:flex;flex-direction:column;justify-content:center}
+.day>.d b{font-family:'Sora',sans-serif;font-size:1.25rem}
+.day>.d small{opacity:.85}
+.day.fin>.d{background:var(--orange)}
+.slot{font-size:.8rem;font-weight:700;color:var(--orange);margin-bottom:4px}
+.day p{margin:0;font-size:.97rem}
+.grades{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.g{border-radius:14px;padding:18px 18px 16px;background:var(--sky);border-left:8px solid var(--blue)}
+.g:nth-child(even){background:var(--peach);border-left-color:var(--orange)}
+.g h3{font-size:1.15rem;margin-bottom:6px}
+.g p{margin:0;font-size:.97rem}
+.g em{display:inline-block;margin-top:8px;font-style:normal;font-weight:700;font-size:.88rem;color:var(--blue)}
+.g:nth-child(even) em{color:#C2500F}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .g em{color:#9CC4FF}:root:not([data-theme="light"]) .g:nth-child(even) em{color:#FFB27F}}
+.join{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.join div{border:2px solid var(--line);border-radius:14px;padding:16px}
+.join h3{font-size:1.05rem;margin-bottom:4px;color:var(--blue)}
+.join p{margin:0;font-size:.97rem}
+.rsvp{margin:44px 0 0;background:var(--navy);color:#fff;border-radius:18px;padding:28px;border-bottom:8px solid var(--orange)}
+.rsvp h2{color:#fff}.rsvp p{margin:6px 0;color:#DCE8FB}
+.rsvp b{color:var(--orange)}
+footer{padding:28px 0 36px;text-align:center;color:var(--muted);font-size:.9rem}
+@media (max-width:760px){.day{grid-template-columns:1fr}.day>div{border-left:0;border-top:1px solid var(--line)}.day>.d{border-top:0}.logos{gap:8px}.logo{height:60px}}
+@media print{.wrap{max-width:none}.day,.g,.join div,.rsvp{break-inside:avoid}section{padding-top:28px}@page{margin:12mm}}
