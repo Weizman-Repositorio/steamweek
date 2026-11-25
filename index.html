@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>STEAM Week 27 – Invitation</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;700;800&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0A2A5E;--blue:#1456B8;--sky:#E6F0FC;--orange:#F26B1D;--peach:#FFEBDC;--ink:#14213A;--bg:#FFFFFF;--card:#F5F9FF;--line:#C9D9EE;--muted:#4A5A78;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--ink:#EAF1FF;--bg:#0B1730;--card:#112349;--line:#27437D;--muted:#B3C3E3;--sky:#112349;--peach:#3A2414}}
+:root[data-theme="dark"]{--ink:#EAF1FF;--bg:#0B1730;--card:#112349;--line:#27437D;--muted:#B3C3E3;--sky:#112349;--peach:#3A2414}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Nunito Sans',system-ui,sans-serif;line-height:1.55;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+h1,h2,h3{font-family:'Sora',system-ui,sans-serif;line-height:1.15;margin:0}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+header{background:var(--navy);color:#fff;border-bottom:8px solid var(--orange)}
+.logos{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:20px 0}
+.logo{height:72px;border:2px dashed rgba(255,255,255,.45);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:.85rem;color:rgba(255,255,255,.7)}
+.hero{padding:28px 0 44px}
+.hero h1{font-size:clamp(2.6rem,9vw,5rem);font-weight:800;letter-spacing:-.02em}
+.hero h1 span{color:var(--orange)}
+.hero p{max-width:60ch;font-size:1.15rem;margin:14px 0 0;color:#DCE8FB}
+.when{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.chip{background:var(--orange);color:#fff;font-weight:700;padding:8px 16px;border-radius:999px}
+.chip.alt{background:transparent;border:2px solid #fff}
+section{padding:44px 0 8px}
+h2{font-size:1.7rem;color:var(--blue);margin-bottom:6px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) h2,:root:not([data-theme="light"]) .join h3,:root:not([data-theme="light"]) .cat-tag,:root:not([data-theme="light"]) .glance h3{color:#7FB1FF}:root:not([data-theme="light"]) .cat.alt .cat-tag{color:#FFB27F}}
+:root[data-theme="dark"] h2,:root[data-theme="dark"] .join h3,:root[data-theme="dark"] .cat-tag,:root[data-theme="dark"] .glance h3{color:#7FB1FF}
+:root[data-theme="dark"] .cat.alt .cat-tag{color:#FFB27F}
+.lead{color:var(--muted);margin:0 0 22px;max-width:65ch}
+.glance{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.glance div{border:1px solid var(--line);border-top:5px solid var(--blue);border-radius:14px;padding:16px 18px;background:var(--card)}
+.glance div:nth-child(even){border-top-color:var(--orange)}
+.glance h3{font-size:1.05rem;margin-bottom:6px;color:var(--blue)}
+.glance p{margin:0;font-size:.95rem;color:var(--muted)}
+.grades{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.g{border-radius:14px;padding:18px 18px 16px;background:var(--sky);border-left:8px solid var(--blue)}
+.g:nth-child(even){background:var(--peach);border-left-color:var(--orange)}
+.g h3{font-size:1.15rem;margin-bottom:6px}
+.g p{margin:0;font-size:.97rem}
+.g em{display:inline-block;margin-top:8px;font-style:normal;font-weight:700;font-size:.88rem;color:var(--blue)}
+.g:nth-child(even) em{color:#C2500F}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .g em{color:#9CC4FF}:root:not([data-theme="light"]) .g:nth-child(even) em{color:#FFB27F}}
+.cats{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.cat{border:2px solid var(--line);border-top:8px solid var(--blue);border-radius:14px;padding:18px 20px;background:var(--card)}
+.cat.alt{border-top-color:var(--orange)}
+.cat-tag{display:inline-block;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:var(--blue);margin-bottom:6px}
+.cat.alt .cat-tag{color:var(--orange)}
+.cat h3{font-size:1.18rem;margin-bottom:8px}
+.cat p{margin:0;font-size:.97rem;color:var(--muted)}
+.join{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.join div{border:2px solid var(--line);border-radius:14px;padding:16px}
+.join h3{font-size:1.05rem;margin-bottom:4px;color:var(--blue)}
+.join p{margin:0;font-size:.97rem}
+.rsvp{margin:44px 0 0;background:var(--navy);color:#fff;border-radius:18px;padding:28px;border-bottom:8px solid var(--orange)}
+.rsvp h2{color:#fff}.rsvp p{margin:6px 0;color:#DCE8FB}
+.rsvp b{color:var(--orange)}
+footer{padding:28px 0 36px;text-align:center;color:var(--muted);font-size:.9rem}
+@media (max-width:760px){.logos{gap:8px}.logo{height:60px}}
+@media print{.wrap{max-width:none}.glance div,.g,.cat,.join div,.rsvp{break-inside:avoid}section{padding-top:28px}@page{margin:12mm}}
+</style>
+</head>
+<body>
+<header>
+ <div class="wrap">
+  <div class="logos" aria-label="Logo placeholders">
+   <div class="logo">Logo 1</div><div class="logo">Logo 2</div><div class="logo">Logo 3</div>
+  </div>
+  <div class="hero">
+   <h1>STEAM <span>Week 27</span></h1>
+   <p>Five days of building, coding, designing and debating. We invite your school’s delegation to represent your institution and compete through real-world projects.</p>
+   <div class="when"><span class="chip">Dates: [add dates]</span><span class="chip alt">Venue: [add school / city]</span></div>
+  </div>
+ </div>
+</header>
+
+<main class="wrap">
+ <section>
+  <h2>The week at a glance</h2>
+  <p class="lead">Across five days, students engage in hands-on workshops, collaborative exhibitions, live competitions, and showcase sessions.</p>
+  <div class="glance">
+   <div><h3>Opening &amp; Interactive Exhibitions</h3><p>Opening ceremony, summative class project displays, and an interactive gym exhibition featuring recorded student presenters.</p></div>
+   <div><h3>Grade-Level Mini-Workshops</h3><p>Multi-session hands-on workshops by grade level where teams design, prototype, and refine their annual STEAM challenges.</p></div>
+   <div><h3>Skill-Building Workshops</h3><p>Cross-grade sessions covering programming and inclusion case studies, video editing, and data visualization.</p></div>
+   <div><h3>Robot Competition</h3><p>Multi-round tournament across qualifying stages, semi-finals, and finals in two distinct robotics categories.</p></div>
+   <div><h3>Debate &amp; WTalks</h3><p>Guided preparation sessions leading into the STEAM Debate tournament and five-minute student WTalks inspired by a guest speaker.</p></div>
+   <div><h3>Final Showcase &amp; Closing</h3><p>Final project presentations across all grades, awards, and the closing farewell ceremony.</p></div>
+  </div>
+ </section>
+
+ <section>
+  <h2>Projects by grade</h2>
+  <p class="lead">Every grade works on its own challenge during the mini-workshops and presents it on the final day.</p>
+  <div class="grades">
+   <div class="g"><h3>5th grade · School Challenge</h3><p>Design Thinking applied to real problems in our school environment.</p></div>
+   <div class="g"><h3>6th grade · Resilient Cities</h3><p>Earthquake-resistant structures and architecture, and a collaborative city built to face a climate event.</p></div>
+   <div class="g"><h3>7th grade · Video Mapping</h3><p>Projection mapping, our most complex challenge, inspired by Jewish heritage and the KKL.</p></div>
+   <div class="g"><h3>8th grade · Pet Assistive Devices</h3><p>Service learning: designing and building prosthetics, wheelchairs and accessories for animals with physical disabilities.</p></div>
+   <div class="g"><h3>9th grade · Beach Cleanup</h3><p>Engineering devices to collect microplastics and debris from sand, tested on a Thursday field trip. Grade 9 also leads the debate.</p><em>Field trip: Thursday</em></div>
+  </div>
+ </section>
+
+ <section>
+  <h2>Robot competition</h2>
+  <p class="lead">Visiting schools compete as independent teams representing their own institutions across two categories throughout the week.</p>
+  <div class="cats">
+   <div class="cat">
+    <span class="cat-tag">Category 1 · Grades 5–6</span>
+    <h3>Robotics Choreography</h3>
+    <p>Teams program a synchronized, fully autonomous routine using at least four robots, blending robotics engineering with an original artistic narrative inspired by KKL or a UN Sustainable Development Goal through music, dance, and custom staging.</p>
+   </div>
+   <div class="cat alt">
+    <span class="cat-tag">Category 2 · Grades 7–9</span>
+    <h3>Mini All-Terrain Rescue Robot</h3>
+    <p>Teams design and build a compact, suitcase-ready autonomous mini rescue robot engineered to navigate a multi-station obstacle course inspired by real rescue scenarios, facing progressively greater terrain challenges in each round.</p>
+   </div>
+  </div>
+ </section>
+
+ <section>
+  <h2>Join us</h2>
+  <p class="lead">Visiting students participate as teams representing their own schools across competitions, debates and talks.</p>
+  <div class="join">
+   <div><h3>School Delegations</h3><p>Each school sends delegations of 4 students per grade, competing under their own school banner.</p></div>
+   <div><h3>STEAM Debate</h3><p>Open to visiting school teams. Schools wishing to participate must submit a debate proposal in advance for evaluation by [Proposal deadline].</p></div>
+   <div><h3>WTalks</h3><p>Inspired by a special guest speaker, students deliver five-minute TED-style talks on the final day. Visiting students who wish to speak must submit a talk proposal for evaluation by [Proposal deadline].</p></div>
+  </div>
+ </section>
+
+ <div class="rsvp">
+  <h2>Confirm your delegation</h2>
+  <p>Please reply by <b>[RSVP date]</b> with your school name, grades, number of students, and any Debate or WTalks proposals.</p>
+  <p>Contact: [name] · [email] · [phone]</p>
+ </div>
+</main>
+<footer>STEAM Week 27 · [School name]</footer>
+</body>
+</html>
